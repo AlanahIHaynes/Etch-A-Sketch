@@ -24,5 +24,5 @@ const startBtn=document.querySelector('.start-btn');
 startBtn.addEventListener('click', inputSquares);
 
 function inputSquares(){
-    numOfSquares=prompt('Input the number of squares you would like per side. ');
+    numOfSquares=prompt('Input the number of squares you would like per side. \n(For example, entering 64 creates a 64x64 grid!)');
 }
