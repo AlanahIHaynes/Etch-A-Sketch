@@ -15,12 +15,9 @@ function createGrid(numSquares, gridContainer){
         /* Adding Hover Effect Listener */
         gridBox.addEventListener('mousedown', startDrawing);
         gridBox.addEventListener('mouseover', hoverEffect);
-        gridBox.addEventListener('mouseup', stopDrawing);
         
-    
-       
-    
     }
+    document.addEventListener('mouseup', stopDrawing);
 }
 
  /* Adding Hover Effects */
