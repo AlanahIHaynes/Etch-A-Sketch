@@ -1,4 +1,5 @@
 const gridContainer=document.querySelector('.grid-container');
+let isDrawing=false;
 
 function createGrid(numSquares, gridContainer){
     //clears nodes under grid container
@@ -12,18 +13,33 @@ function createGrid(numSquares, gridContainer){
         gridContainer.appendChild(gridBox);
     
         /* Adding Hover Effect Listener */
+        gridBox.addEventListener('mousedown', startDrawing);
         gridBox.addEventListener('mouseover', hoverEffect);
+        gridBox.addEventListener('mouseup', stopDrawing);
         
     
-        /* Adding Hover Effects */
-        function hoverEffect(){
-            gridBox.style.backgroundColor='black';
-        }
+       
     
     }
 }
 
+ /* Adding Hover Effects */
+function hoverEffect(){
+    if(isDrawing==true){
+        this.style.backgroundColor='black';
+    }
+    
+}
 
+function startDrawing(){
+    isDrawing=true;
+    this.style.backgroundColor='black';
+
+}
+
+function stopDrawing(){
+    isDrawing=false;
+}
 
 const startBtn=document.querySelector('.start-btn');
 startBtn.addEventListener('click', inputSquares);
@@ -44,3 +60,6 @@ function inputSquares(){
 
 
 createGrid(16, gridContainer);
+
+//Stop drawing when mouse is released
+//document.addEventListener('mouseup', stopDrawing);
