@@ -60,6 +60,3 @@ function inputSquares(){
 
 
 createGrid(16, gridContainer);
-
-//Stop drawing when mouse is released
-document.addEventListener('mouseup', stopDrawing);
