@@ -29,8 +29,10 @@ function hoverEffect(){
 }
 
 function startDrawing(){
-    isDrawing=true;
-    this.style.backgroundColor='black';
+        isDrawing=true;
+        this.style.backgroundColor='black';
+
+    
 
 }
 
